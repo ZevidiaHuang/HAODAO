@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520">
+  <rect width="720" height="520" fill="#f2ede5"/>
+  <path d="M84 350 C190 230 330 190 610 105" fill="none" stroke="#28251f" stroke-width="18" stroke-linecap="round" opacity=".28"/>
+  <path d="M110 365 C230 245 350 208 620 126" fill="none" stroke="#28251f" stroke-width="5" stroke-linecap="round" opacity=".58"/>
+  <g fill="#8a735a" opacity=".7" font-family="serif" font-size="62">
+    <text x="250" y="235">寧靜致遠</text>
+  </g>
+</svg>

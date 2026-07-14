@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900">
+  <defs>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7f0e6"/>
+      <stop offset=".55" stop-color="#ded2c2"/>
+      <stop offset="1" stop-color="#fbf8f2"/>
+    </linearGradient>
+    <radialGradient id="light" cx=".2" cy=".1" r=".9">
+      <stop offset="0" stop-color="#fffdf8" stop-opacity=".95"/>
+      <stop offset=".55" stop-color="#fffdf8" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#8a735a" stop-opacity=".22"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+  <rect width="1400" height="900" fill="url(#paper)"/>
+  <rect width="1400" height="900" fill="url(#light)"/>
+  <g opacity=".22" fill="#fffaf2" font-family="serif" font-size="86">
+    <text x="830" y="150" writing-mode="tb">靜觀照見清明自在</text>
+    <text x="1010" y="80" writing-mode="tb">心若光明萬物生香</text>
+    <text x="1160" y="210" writing-mode="tb">因法而生以法為燈</text>
+  </g>
+  <path d="M200 750 C360 540 560 450 830 330" fill="none" stroke="#2d2922" stroke-width="16" stroke-linecap="round" opacity=".34" filter="url(#soft)"/>
+  <path d="M240 770 C410 570 610 470 870 350" fill="none" stroke="#28251f" stroke-width="6" stroke-linecap="round" opacity=".58"/>
+  <g opacity=".75">
+    <path d="M1040 660 C1100 595 1135 530 1158 450" fill="none" stroke="#8a735a" stroke-width="3"/>
+    <circle cx="1102" cy="592" r="8" fill="#b99353"/>
+    <circle cx="1135" cy="528" r="6" fill="#c8a35f"/>
+    <circle cx="1160" cy="455" r="5" fill="#d4b46d"/>
+  </g>
+</svg>
