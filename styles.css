@@ -202,21 +202,19 @@ button {
   inset: 0;
   z-index: 2;
   background:
-    linear-gradient(90deg, rgba(251, 248, 242, .94) 0%, rgba(251, 248, 242, .62) 34%, rgba(251, 248, 242, .12) 100%),
-    radial-gradient(circle at 22% 45%, rgba(255, 253, 248, .72), transparent 34%),
-    linear-gradient(0deg, rgba(251, 248, 242, .62), transparent 50%);
+    linear-gradient(90deg, rgba(251, 248, 242, .92) 0%, rgba(251, 248, 242, .56) 44%, rgba(251, 248, 242, .08) 100%),
+    linear-gradient(0deg, rgba(251, 248, 242, .72), transparent 50%);
 }
 
 .ink-flow {
-  z-index: 3;
-  pointer-events: none;
-  mix-blend-mode: normal;
-  opacity: 1;
+  z-index: 1;
+  mix-blend-mode: screen;
+  opacity: .82;
 }
 
 .hero-content {
   position: relative;
-  z-index: 4;
+  z-index: 3;
   max-width: 620px;
 }
 
@@ -294,7 +292,7 @@ p {
 
 .carousel-dots {
   position: absolute;
-  z-index: 5;
+  z-index: 4;
   right: clamp(24px, 6vw, 88px);
   bottom: 56px;
   display: flex;
@@ -825,5 +823,7 @@ p {
     animation-iteration-count: 1 !important;
     transition-duration: .01ms !important;
   }
-  .ink-flow { opacity: .35; }
+  .ink-flow {
+    display: none;
+  }
 }
