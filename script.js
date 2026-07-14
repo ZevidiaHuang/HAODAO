@@ -98,12 +98,14 @@ document.querySelectorAll("[data-tab]").forEach((tab) => {
 const canvas = document.querySelector("[data-ink-flow]");
 const ctx = canvas.getContext("2d");
 const calligraphyStreams = [
-  "因法而生以法為燈",
-  "靜觀照見清明自在",
-  "心若光明萬物生香",
-  "道法自然上善若水",
-  "覺而不迷照見本心",
-  "在日常中修行"
+  "因法而生以法為燈在日常中修行",
+  "靜觀照見清明自在心若光明",
+  "道法自然上善若水和光同塵",
+  "覺而不迷照見本心願行相續",
+  "觀照當下煩惱即菩提",
+  "以智慧為舟以慈悲為岸",
+  "心燈不滅照見來路",
+  "清明自在無住生心"
 ];
 const streams = [];
 let width = 0;
@@ -124,19 +126,22 @@ function resizeInkCanvas() {
 
 function buildInkStreams() {
   streams.length = 0;
-  const count = Math.max(6, Math.floor(width / 180));
+  const count = Math.max(18, Math.floor(width / 82));
   for (let i = 0; i < count; i++) {
     const rightBias = i / Math.max(count - 1, 1);
+    const layer = Math.random();
+    const isCenterGlow = rightBias > .42 && rightBias < .78;
     streams.push({
       text: calligraphyStreams[i % calligraphyStreams.length],
-      x: width * (0.34 + rightBias * 0.62) + (Math.random() * 34 - 17),
+      x: width * (0.18 + rightBias * 0.82) + (Math.random() * 42 - 21),
       y: -Math.random() * height,
-      speed: (reduceMotion ? 4 : 10) + Math.random() * (reduceMotion ? 4 : 12),
-      size: 42 + Math.random() * 38,
-      gap: 18 + Math.random() * 18,
-      alpha: .2 + Math.random() * .18,
-      blur: 4 + Math.random() * 10,
-      sway: 8 + Math.random() * 18,
+      speed: (reduceMotion ? 3 : 7) + Math.random() * (reduceMotion ? 3 : 9),
+      size: layer > .74 ? 48 + Math.random() * 34 : 20 + Math.random() * 30,
+      gap: layer > .74 ? 8 + Math.random() * 16 : 2 + Math.random() * 12,
+      alpha: (isCenterGlow ? .18 : .1) + Math.random() * (layer > .74 ? .28 : .16),
+      blur: layer > .74 ? 2 + Math.random() * 7 : 5 + Math.random() * 13,
+      sway: 3 + Math.random() * 12,
+      warm: Math.random() > .58,
       phase: Math.random() * Math.PI * 2
     });
   }
@@ -151,7 +156,7 @@ function drawInkFlow(time) {
 
   streams.forEach((stream) => {
     const lineHeight = stream.size + stream.gap;
-    const blockHeight = stream.text.length * lineHeight + height * .42;
+    const blockHeight = stream.text.length * lineHeight + height * .18;
     stream.y += stream.speed * delta;
     if (stream.y > lineHeight) stream.y -= blockHeight;
 
@@ -159,26 +164,47 @@ function drawInkFlow(time) {
     ctx.font = `${stream.size}px "Noto Serif TC", "Songti TC", Georgia, serif`;
     ctx.textAlign = "center";
     ctx.textBaseline = "top";
-    ctx.shadowColor = "rgba(255, 250, 242, .42)";
+    ctx.shadowColor = stream.warm ? "rgba(231, 204, 151, .48)" : "rgba(255, 250, 242, .56)";
     ctx.shadowBlur = stream.blur;
 
-    for (let repeat = -1; repeat < 3; repeat++) {
+    for (let repeat = -1; repeat < 4; repeat++) {
       const baseY = stream.y + repeat * blockHeight;
       for (let index = 0; index < stream.text.length; index++) {
         const y = baseY + index * lineHeight;
         if (y < -lineHeight || y > height + lineHeight) continue;
-        const edgeFade = Math.min(1, Math.max(0, y / 160), Math.max(0, (height - y) / 180));
-        const pulse = .82 + Math.sin(time * 0.0007 + index + stream.phase) * .18;
-        ctx.fillStyle = `rgba(40, 37, 31, ${stream.alpha * edgeFade * pulse * .28})`;
-        ctx.fillText(stream.text[index], x + 2, y + 2);
-        ctx.fillStyle = `rgba(255, 250, 242, ${stream.alpha * edgeFade * pulse})`;
+        const edgeFade = Math.min(1, Math.max(0, y / 120), Math.max(0, (height - y) / 140));
+        const pulse = .76 + Math.sin(time * 0.00055 + index * .8 + stream.phase) * .24;
+        const alpha = stream.alpha * edgeFade * pulse;
+        ctx.fillStyle = `rgba(94, 75, 55, ${alpha * .16})`;
+        ctx.fillText(stream.text[index], x + 1.5, y + 1.5);
+        ctx.fillStyle = stream.warm
+          ? `rgba(255, 228, 181, ${alpha * .82})`
+          : `rgba(255, 252, 244, ${alpha})`;
         ctx.fillText(stream.text[index], x, y);
       }
     }
   });
 
+  drawInkSparkles(time);
+
   ctx.restore();
   requestAnimationFrame(drawInkFlow);
+}
+
+function drawInkSparkles(time) {
+  ctx.save();
+  ctx.globalCompositeOperation = "lighter";
+  const count = Math.floor(width / 26);
+  for (let i = 0; i < count; i++) {
+    const x = (Math.sin(i * 44.7) * 0.5 + 0.5) * width;
+    const drift = ((time * 0.012 + i * 61) % (height + 120)) - 60;
+    const alpha = .05 + (Math.sin(time * 0.001 + i) * .5 + .5) * .12;
+    ctx.fillStyle = `rgba(255, 237, 190, ${alpha})`;
+    ctx.beginPath();
+    ctx.arc(x, drift, 1 + (i % 3), 0, Math.PI * 2);
+    ctx.fill();
+  }
+  ctx.restore();
 }
 
 resizeInkCanvas();

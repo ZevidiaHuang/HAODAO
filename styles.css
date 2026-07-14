@@ -202,15 +202,16 @@ button {
   inset: 0;
   z-index: 2;
   background:
-    linear-gradient(90deg, rgba(251, 248, 242, .92) 0%, rgba(251, 248, 242, .56) 44%, rgba(251, 248, 242, .08) 100%),
-    linear-gradient(0deg, rgba(251, 248, 242, .72), transparent 50%);
+    linear-gradient(90deg, rgba(251, 248, 242, .94) 0%, rgba(251, 248, 242, .62) 34%, rgba(251, 248, 242, .12) 100%),
+    radial-gradient(circle at 22% 45%, rgba(255, 253, 248, .72), transparent 34%),
+    linear-gradient(0deg, rgba(251, 248, 242, .62), transparent 50%);
 }
 
 .ink-flow {
   z-index: 3;
   pointer-events: none;
   mix-blend-mode: normal;
-  opacity: .95;
+  opacity: 1;
 }
 
 .hero-content {
