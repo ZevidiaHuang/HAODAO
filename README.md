@@ -4,7 +4,12 @@
 
 ## 檔案
 
-- `index.html`：網站內容與架構
+- `index.html`：首頁
+- `about.html`：認識昊道
+- `archive.html`：三大法舟
+- `learning.html`：學習與實踐
+- `journey.html`：開啟旅程
+- `faq.html`：常見問題
 - `styles.css`：視覺風格與響應式版面
 - `script.js`：圖片輪播、首頁書法字流淌、淡入、分頁、FAQ、彈窗與手機選單
 - `assets/`：網站使用的 SVG 視覺素材
