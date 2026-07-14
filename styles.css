@@ -207,14 +207,15 @@ button {
 }
 
 .ink-flow {
-  z-index: 1;
-  mix-blend-mode: screen;
-  opacity: .82;
+  z-index: 3;
+  pointer-events: none;
+  mix-blend-mode: normal;
+  opacity: .95;
 }
 
 .hero-content {
   position: relative;
-  z-index: 3;
+  z-index: 4;
   max-width: 620px;
 }
 
@@ -292,7 +293,7 @@ p {
 
 .carousel-dots {
   position: absolute;
-  z-index: 4;
+  z-index: 5;
   right: clamp(24px, 6vw, 88px);
   bottom: 56px;
   display: flex;
@@ -823,7 +824,5 @@ p {
     animation-iteration-count: 1 !important;
     transition-duration: .01ms !important;
   }
-  .ink-flow {
-    display: none;
-  }
+  .ink-flow { opacity: .35; }
 }

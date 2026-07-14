@@ -109,6 +109,7 @@ const streams = [];
 let width = 0;
 let height = 0;
 let lastTime = 0;
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function resizeInkCanvas() {
   const ratio = Math.min(window.devicePixelRatio || 1, 2);
@@ -128,12 +129,12 @@ function buildInkStreams() {
     const rightBias = i / Math.max(count - 1, 1);
     streams.push({
       text: calligraphyStreams[i % calligraphyStreams.length],
-      x: width * (0.38 + rightBias * 0.56) + (Math.random() * 34 - 17),
+      x: width * (0.34 + rightBias * 0.62) + (Math.random() * 34 - 17),
       y: -Math.random() * height,
-      speed: 8 + Math.random() * 10,
-      size: 38 + Math.random() * 34,
+      speed: (reduceMotion ? 4 : 10) + Math.random() * (reduceMotion ? 4 : 12),
+      size: 42 + Math.random() * 38,
       gap: 18 + Math.random() * 18,
-      alpha: .095 + Math.random() * .13,
+      alpha: .2 + Math.random() * .18,
       blur: 4 + Math.random() * 10,
       sway: 8 + Math.random() * 18,
       phase: Math.random() * Math.PI * 2
@@ -168,6 +169,8 @@ function drawInkFlow(time) {
         if (y < -lineHeight || y > height + lineHeight) continue;
         const edgeFade = Math.min(1, Math.max(0, y / 160), Math.max(0, (height - y) / 180));
         const pulse = .82 + Math.sin(time * 0.0007 + index + stream.phase) * .18;
+        ctx.fillStyle = `rgba(40, 37, 31, ${stream.alpha * edgeFade * pulse * .28})`;
+        ctx.fillText(stream.text[index], x + 2, y + 2);
         ctx.fillStyle = `rgba(255, 250, 242, ${stream.alpha * edgeFade * pulse})`;
         ctx.fillText(stream.text[index], x, y);
       }
@@ -181,6 +184,4 @@ function drawInkFlow(time) {
 resizeInkCanvas();
 window.addEventListener("resize", resizeInkCanvas);
 
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  requestAnimationFrame(drawInkFlow);
-}
+requestAnimationFrame(drawInkFlow);
