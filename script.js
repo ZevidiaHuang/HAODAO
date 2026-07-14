@@ -211,7 +211,6 @@ function drawInkSparkles(time) {
   }
   ctx.restore();
 }
-
 if (canvas && ctx) {
   resizeInkCanvas();
   window.addEventListener("resize", resizeInkCanvas);
