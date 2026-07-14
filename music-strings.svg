@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f9f3ea"/><stop offset=".52" stop-color="#d6c9b9"/><stop offset="1" stop-color="#fbf8f2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <g transform="translate(130 170) rotate(-10)">
+    <rect x="0" y="210" width="900" height="120" rx="18" fill="#5b5148" opacity=".38"/>
+    <rect x="90" y="170" width="780" height="110" rx="14" fill="#8a735a" opacity=".32"/>
+    <g stroke="#fff8e8" stroke-width="5" opacity=".68">
+      <path d="M105 118 L820 360"/><path d="M145 100 L860 342"/><path d="M185 92 L900 334"/><path d="M225 92 L940 334"/>
+    </g>
+    <g fill="#d9bf82" opacity=".78">
+      <circle cx="470" cy="226" r="12"/><circle cx="545" cy="248" r="12"/><circle cx="620" cy="272" r="12"/>
+    </g>
+  </g>
+  <g opacity=".18" fill="#fffaf2" font-family="serif" font-size="70">
+    <text x="780" y="80" writing-mode="tb">清音入心</text>
+    <text x="930" y="150" writing-mode="tb">和光同塵</text>
+  </g>
+</svg>

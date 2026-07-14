@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>昊道文化 HAO DAO</title>
+    <meta name="description" content="昊道文化網站原型：書法、音樂、經典智慧、學習實踐與開啟旅程。" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="回到首頁">
+        <span class="brand-mark">昊道</span>
+        <span class="brand-sub">HAO DAO</span>
+      </a>
+      <nav class="desktop-nav" aria-label="主選單">
+        <a href="#about">認識昊道</a>
+        <a href="#archive">三大法舟</a>
+        <a href="#learning">學習與實踐</a>
+        <a href="#journey">開啟旅程</a>
+        <a href="#faq">常見問題</a>
+      </nav>
+      <button class="menu-button" type="button" aria-label="開啟選單" data-menu-button>
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <nav class="mobile-panel" data-mobile-panel aria-label="手機選單">
+      <a href="#about">認識昊道</a>
+      <a href="#archive">三大法舟</a>
+      <a href="#learning">學習與實踐</a>
+      <a href="#journey">開啟旅程</a>
+      <a href="#faq">常見問題</a>
+    </nav>
+
+    <main>
+      <section id="home" class="hero section-dark">
+        <div class="carousel" data-carousel>
+          <div class="slide is-active" style="background-image:url('assets/hero-calligraphy.svg')"></div>
+          <div class="slide" style="background-image:url('assets/quiet-room.svg')"></div>
+          <div class="slide" style="background-image:url('assets/music-strings.svg')"></div>
+        </div>
+        <canvas class="ink-flow" data-ink-flow aria-hidden="true"></canvas>
+        <div class="hero-content reveal">
+          <p class="eyebrow">HAO DAO CULTURE</p>
+          <h1>因法而生<br />以法為燈</h1>
+          <p>陪伴生命成長，提升內心文明，在日常中修行，在修行中生活。</p>
+          <div class="hero-actions">
+            <a class="text-link light" href="#archive">探索三大法舟</a>
+            <a class="text-link light" href="#learning">查看活動課程</a>
+          </div>
+        </div>
+        <div class="carousel-dots" data-dots aria-label="輪播控制"></div>
+      </section>
+
+      <section class="content-section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">CALLIGRAPHY</p>
+          <h2>書法法舟</h2>
+          <a class="text-link" href="#calligraphy">探索更多</a>
+        </div>
+        <div class="card-row">
+          <article class="art-card" data-detail="書法作品｜寧靜致遠|線上展覽新作，以筆勢呈現由定入明的心境。|68 × 136 cm / 水墨紙本">
+            <img src="assets/ink-card.svg" alt="書法作品寧靜致遠" />
+            <h3>寧靜致遠</h3>
+            <p>線上展覽｜水墨紙本</p>
+          </article>
+          <article class="art-card" data-detail="書法作品｜道法自然|從自然節律看見心的安定。|34 × 136 cm / 水墨紙本">
+            <img src="assets/hero-calligraphy.svg" alt="書法作品道法自然" />
+            <h3>道法自然</h3>
+            <p>最新上傳｜直幅</p>
+          </article>
+          <article class="art-card" data-detail="書法作品｜上善若水|柔中有力，安住當下。|136 × 33 cm / 橫幅">
+            <img src="assets/quiet-room.svg" alt="書法作品上善若水" />
+            <h3>上善若水</h3>
+            <p>精選典藏｜橫幅</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">MUSIC</p>
+          <h2>音樂作品</h2>
+          <a class="text-link" href="#music">探索更多</a>
+        </div>
+        <div class="card-row">
+          <article class="art-card music-card" data-detail="音樂作品｜心的方向|以琴音與低吟陪伴安靜覺察。|03:42 / 靜心音樂">
+            <img src="assets/music-strings.svg" alt="音樂作品心的方向" />
+            <span class="play">▶</span>
+            <h3>心的方向</h3>
+            <p>靜心音樂</p>
+          </article>
+          <article class="art-card music-card" data-detail="音樂作品｜如是|清亮弦音，回到當下。|04:18 / 原創音樂">
+            <img src="assets/mountain-wisdom.svg" alt="音樂作品如是" />
+            <span class="play">▶</span>
+            <h3>如是</h3>
+            <p>原創音樂</p>
+          </article>
+          <article class="art-card music-card" data-detail="音樂作品｜湖風自在|如風入湖，心緒漸平。|05:02 / 共修選曲">
+            <img src="assets/quiet-room.svg" alt="音樂作品湖風自在" />
+            <span class="play">▶</span>
+            <h3>湖風自在</h3>
+            <p>共修選曲</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">WISDOM</p>
+          <h2>經典智慧</h2>
+          <a class="text-link" href="#wisdom">探索更多</a>
+        </div>
+        <div class="article-list">
+          <article data-detail="經典智慧｜什麼是修行？|修行不是逃離生活，而是在生活中看見自己。|閱讀時間 6 分鐘">
+            <img src="assets/quiet-room.svg" alt="文章什麼是修行" />
+            <div><h3>什麼是修行？</h3><p>修行不是逃離生活，而是在生活中看見自己。</p></div>
+          </article>
+          <article data-detail="經典智慧｜因果不虛|每一個念頭與選擇，都正在成為生命的方向。|閱讀時間 8 分鐘">
+            <img src="assets/mountain-wisdom.svg" alt="文章因果不虛" />
+            <div><h3>因果不虛</h3><p>每一個念頭與選擇，都正在成為生命的方向。</p></div>
+          </article>
+          <article data-detail="經典智慧｜心的本來面目|本日只是，照見當作，只是忘了如何回來。|閱讀時間 7 分鐘">
+            <img src="assets/hero-calligraphy.svg" alt="文章心的本來面目" />
+            <div><h3>心的本來面目</h3><p>安靜下來，讓心回到清明。</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="learning-cta reveal">
+        <div>
+          <p class="eyebrow">PRACTICE</p>
+          <h2>學習與實踐</h2>
+          <p>課程、讀書會與共修，陪伴你把理解帶回日常，把日常轉化成修行。</p>
+        </div>
+        <a class="button" href="#learning">探索課程與活動</a>
+      </section>
+
+      <section id="about" class="page-section reveal">
+        <div class="page-hero">
+          <p class="eyebrow">ABOUT</p>
+          <h2>認識昊道</h2>
+          <p>昊道文化是一個公益文化平台，從生活問題出發，以聖賢智慧、心靈教育、書法藝術、原創音樂與共修服務，陪伴人走向光明與覺醒。</p>
+        </div>
+        <div class="split-grid">
+          <article><h3>我們的理念</h3><p>陪伴生命成長，提升內心文明。讓修行回到人與生活，而不是停留在遙遠概念。</p></article>
+          <article><h3>昊道在做什麼</h3><p>建立典藏、開展課程、陪伴讀書會、串連台灣共修點，讓文化成為可參與的日常。</p></article>
+          <article><h3>發展歷程</h3><p>從小型讀書與共修開始，逐步累積書法、音樂、文章與公益課程，形成開放的文化平台。</p></article>
+        </div>
+      </section>
+
+      <section id="learning" class="page-section reveal">
+        <div class="image-hero" style="background-image:url('assets/quiet-room.svg')">
+          <p class="eyebrow">LEARNING & PRACTICE</p>
+          <h2>學習與實踐</h2>
+          <p>從理解到實踐，從個人成長到服務他人。</p>
+        </div>
+
+        <div class="program-block">
+          <div class="section-heading"><h3>近期課程</h3><a class="text-link" href="#courses">詳情與報名</a></div>
+          <div class="mini-row">
+            <button class="mini-card" data-detail="課程｜生命實踐入門|時間：8/16 14:00，地點：台北，適合第一次接觸者。|報名：https://example.com/course-1">生命實踐入門</button>
+            <button class="mini-card" data-detail="課程｜情緒覺察練習|時間：8/23 19:30，線上課程，適合想安定身心者。|報名：https://example.com/course-2">情緒覺察練習</button>
+            <button class="mini-card" data-detail="課程｜日常中的願力|時間：9/06 10:00，台中，適合持續學習者。|報名：https://example.com/course-3">日常中的願力</button>
+          </div>
+        </div>
+
+        <div class="program-block">
+          <div class="section-heading"><h3>近期讀書會</h3><a class="text-link" href="#reading">詳情與報名</a></div>
+          <div class="mini-row">
+            <button class="mini-card" data-detail="讀書會｜金剛經導讀|時間：7/18 線上，適合想理解經典與生活關係者。|報名：https://example.com/reading-1">金剛經導讀</button>
+            <button class="mini-card" data-detail="讀書會｜心經導讀|時間：8/01 線上，從空性看見日常。|報名：https://example.com/reading-2">心經導讀</button>
+            <button class="mini-card" data-detail="讀書會｜道德經導讀|時間：8/15 線上，理解自然與無為。|報名：https://example.com/reading-3">道德經導讀</button>
+          </div>
+        </div>
+
+        <div class="program-block">
+          <div class="section-heading"><h3>近期共修</h3><a class="text-link" href="#practice">詳情與報名</a></div>
+          <div class="mini-row">
+            <button class="mini-card" data-detail="共修｜台北週三共修|每週三 19:30，台北市大安區。|報名：https://example.com/practice-taipei">台北週三共修</button>
+            <button class="mini-card" data-detail="共修｜台中週六共修|每週六 10:00，台中市西區。|報名：https://example.com/practice-taichung">台中週六共修</button>
+            <button class="mini-card" data-detail="共修｜高雄週日共修|每週日 14:00，高雄市苓雅區。|報名：https://example.com/practice-kaohsiung">高雄週日共修</button>
+          </div>
+        </div>
+
+        <div id="courses" class="list-block">
+          <h3>全部課程</h3>
+          <div class="long-card"><span class="tag">線下</span><b>生命實踐入門</b><p>台北 / 適合第一次接觸昊道者</p><button data-detail="課程詳情｜生命實踐入門|課程名稱、時間、地點、適合人群、課程介紹。|報名：https://example.com/course-1">課程詳情與報名</button></div>
+          <div class="long-card"><span class="tag">線上</span><b>情緒覺察練習</b><p>線上直播 / 適合想安定身心者</p><button data-detail="課程詳情｜情緒覺察練習|透過覺察練習，理解情緒與念頭如何牽動生活。|報名：https://example.com/course-2">課程詳情與報名</button></div>
+        </div>
+
+        <div id="reading" class="list-block">
+          <h3>全部讀書會</h3>
+          <div class="long-card"><span class="tag">線上</span><b>金剛經導讀</b><p>由經典回到日常選擇</p><button data-detail="讀書會介紹｜金剛經導讀|主題、時間、地點、適合人群與導讀介紹。|報名：https://example.com/reading-1">課程詳情與報名</button></div>
+          <div class="long-card"><span class="tag">線上</span><b>心經導讀</b><p>以簡明語言理解經典智慧</p><button data-detail="讀書會介紹｜心經導讀|從心經進入觀照、放下與實踐。|報名：https://example.com/reading-2">課程詳情與報名</button></div>
+        </div>
+
+        <div id="practice" class="list-block">
+          <h3>共修 Practice Circle</h3>
+          <div class="practice-grid">
+            <article><h4>北部｜台北共修點</h4><p>每週三 19:30 / 台北市大安區</p><a href="#">報名</a></article>
+            <article><h4>中部｜台中共修點</h4><p>每週六 10:00 / 台中市西區</p><a href="#">報名</a></article>
+            <article><h4>南部｜台南共修點</h4><p>每週五 19:30 / 台南市東區</p><a href="#">報名</a></article>
+            <article><h4>南部｜高雄共修點</h4><p>每週日 14:00 / 高雄市苓雅區</p><a href="#">報名</a></article>
+          </div>
+          <div class="long-card"><span class="tag">線下</span><b>秋季大共修</b><p>最近大共修資訊，開放新舊朋友參與。</p><button data-detail="大共修介紹｜秋季大共修|時間：9/21，地點：台北，適合人群：想穩定共修與服務者。|報名：https://example.com/special-practice">詳情與報名</button></div>
+        </div>
+      </section>
+
+      <section id="archive" class="page-section reveal">
+        <div class="page-hero">
+          <p class="eyebrow">EXPLORE & ARCHIVE</p>
+          <h2>三大法舟</h2>
+          <p>以書法、音樂與經典智慧，建立可探索、可典藏、可回到日常實踐的文化入口。</p>
+        </div>
+        <div class="archive-tabs" data-tabs>
+          <button class="is-active" data-tab="calligraphy">書法藝術</button>
+          <button data-tab="music">音樂作品</button>
+          <button data-tab="wisdom">經典智慧</button>
+        </div>
+        <div id="calligraphy" class="tab-panel is-active" data-panel="calligraphy">
+          <div class="image-hero" style="background-image:url('assets/hero-calligraphy.svg')"><h3>展覽首頁 Virtual Exhibition</h3><p>線上展覽、全部作品與作品詳情。</p></div>
+        </div>
+        <div id="music" class="tab-panel" data-panel="music">
+          <div class="image-hero" style="background-image:url('assets/music-strings.svg')"><h3>音樂首頁 Music</h3><p>音樂首頁、全部作品、作品詳情與播放器。</p></div>
+        </div>
+        <div id="wisdom" class="tab-panel" data-panel="wisdom">
+          <div class="image-hero" style="background-image:url('assets/mountain-wisdom.svg')"><h3>經典首頁 Wisdom</h3><p>經典首頁、全部文章與文章詳情。</p></div>
+        </div>
+      </section>
+
+      <section id="journey" class="page-section reveal">
+        <div class="page-hero">
+          <p class="eyebrow">START YOUR JOURNEY</p>
+          <h2>開啟旅程</h2>
+        </div>
+        <div class="journey-grid">
+          <a href="#about">第一次認識昊道<span>從理念與日常問題開始</span></a>
+          <a href="#learning">我想開始學習<span>前往課程、讀書會與共修</span></a>
+          <a href="#archive">我想探索典藏<span>進入書法、音樂與智慧</span></a>
+          <a href="mailto:hello@example.com">聯絡我們<span>留下你的問題與需求</span></a>
+        </div>
+      </section>
+
+      <section id="faq" class="page-section reveal">
+        <div class="page-hero">
+          <p class="eyebrow">FAQ</p>
+          <h2>常見問題</h2>
+        </div>
+        <div class="faq-list">
+          <button class="faq-item"><span>第一次參加需要準備什麼？</span><p>保持開放與自在即可；每項活動頁面都會列出時間、地點與注意事項。</p></button>
+          <button class="faq-item"><span>課程與共修是宗教活動嗎？</span><p>網站以文化、學習與生命實踐為主，不使用強烈宗教化呈現。</p></button>
+          <button class="faq-item"><span>可以只看典藏內容嗎？</span><p>可以，書法、音樂與文章都會保留公開瀏覽入口。</p></button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div><b>昊道</b><span>HAO DAO</span></div>
+      <nav><a href="#about">認識昊道</a><a href="#archive">三大法舟</a><a href="#learning">學習與實踐</a><a href="#journey">開啟旅程</a></nav>
+      <p>© 2026 昊道文化. All rights reserved.</p>
+    </footer>
+
+    <dialog class="detail-dialog" data-dialog>
+      <button class="close" type="button" data-close aria-label="關閉">×</button>
+      <p class="eyebrow" data-dialog-kicker>DETAIL</p>
+      <h2 data-dialog-title></h2>
+      <p data-dialog-body></p>
+      <p class="dialog-meta" data-dialog-meta></p>
+      <a class="button" href="#" data-dialog-link>前往報名 / 閱讀更多</a>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
