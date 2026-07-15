@@ -25,7 +25,7 @@ mobilePanel.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => mobilePanel.classList.remove("is-open"));
 });
 
-if (slides.length && dotsWrap) {
+if (slides.length > 1 && dotsWrap) {
   slides.forEach((_, index) => {
     const dot = document.createElement("button");
     dot.type = "button";
@@ -46,6 +46,9 @@ if (slides.length && dotsWrap) {
 
   setSlide(0);
   setInterval(() => setSlide((currentSlide + 1) % slides.length), 6200);
+} else if (slides.length) {
+  slides[0].classList.add("is-active");
+  if (dotsWrap) dotsWrap.hidden = true;
 }
 
 const observer = new IntersectionObserver((entries) => {

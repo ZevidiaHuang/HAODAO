@@ -173,8 +173,7 @@ button {
 }
 
 .carousel,
-.slide,
-.ink-flow {
+.slide {
   position: absolute;
   inset: 0;
 }
@@ -207,16 +206,9 @@ button {
     linear-gradient(0deg, rgba(251, 248, 242, .62), transparent 50%);
 }
 
-.ink-flow {
-  z-index: 3;
-  pointer-events: none;
-  mix-blend-mode: normal;
-  opacity: 1;
-}
-
 .hero-content {
   position: relative;
-  z-index: 4;
+  z-index: 3;
   max-width: 620px;
 }
 
@@ -849,5 +841,4 @@ p {
     animation-iteration-count: 1 !important;
     transition-duration: .01ms !important;
   }
-  .ink-flow { opacity: .35; }
 }
